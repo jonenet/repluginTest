@@ -1,5 +1,6 @@
 package com.example.ex_zhoulai.plugintest;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -47,15 +48,29 @@ public class Demo1MainActivity extends AppCompatActivity {
 //                }, 1000);
 
                 //可以传递数据，内置插件如果要升级，可以通过修改版本号升级，已安装用户可使用 install 从外部安装升级
-                RePlugin.install("file:///android_asset/pluginme.jar");
-                Intent intent = RePlugin.createIntent("com.example.pluginme", "com.example.pluginme.MainActivity");
-                intent.putExtra("host_str1", "cccc");
+//                RePlugin.install("file:///android_asset/pluginme.jar");
+                Intent intent = new Intent();
+                intent.setComponent(new ComponentName("com.example.pluginme", "com.example.pluginme.MainActivity"));
+
+//                intent.putExtra("host_str1", "cccc");
 //                intent.putExtra("host_str2", "dddd");
-                RePlugin.startActivity(this, intent);
+                RePlugin.startActivityForResult(this, intent, 100, null);
+//                RePlugin.startActivity(this, intent);
                 break;
         }
     }
 
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (requestCode == 100 && resultCode == RESULT_OK) {
+        if (null != data) {
+            String result = data.getStringExtra("result");
+            Toast.makeText(Demo1MainActivity.this, result, Toast.LENGTH_SHORT).show();
+        }
+//        }
+    }
 
     /**
      * 模拟安装或升级（覆盖安装）外置插件
