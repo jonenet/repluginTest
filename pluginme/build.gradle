@@ -41,7 +41,7 @@ repositories {
 // 这个plugin需要放在android配置之后，因为需要读取android中的配置项
 apply plugin: 'replugin-plugin-gradle'
 repluginPluginConfig {
-    pluginName = "plugintest" //别名com.example.pluginme.MainActivity
+    pluginName = "pluginme" //别名com.example.pluginme.MainActivity
     hostApplicationId = "com.example.ex_zhoulai.plugintest"
     hostAppLauncherActivity = "com.example.ex_zhoulai.plugintest.Demo1MainActivity"
 }

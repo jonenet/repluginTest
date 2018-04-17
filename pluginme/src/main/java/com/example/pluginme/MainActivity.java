@@ -1,9 +1,7 @@
 package com.example.pluginme;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import com.qihoo360.replugin.loader.a.PluginActivity;
 
@@ -21,9 +19,9 @@ public class MainActivity extends PluginActivity {
 ////            String host_str3 = intent.getStringExtra("host_str3");
 //            if (null != host_str2) {
 //                tvText1.setText(host_str1 + host_str2);
-        Intent intent2 = new Intent();
-        intent2.putExtra("result", "result");
-        setResult(10, intent2);
+        Intent intent = new Intent();
+        intent.putExtra("result", "result");
+        setResult(10, intent);
 //        finish();
 //            } else {
 //                tvText1.setText("str null");

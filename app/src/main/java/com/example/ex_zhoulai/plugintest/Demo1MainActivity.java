@@ -4,8 +4,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
@@ -50,12 +48,12 @@ public class Demo1MainActivity extends AppCompatActivity {
                 //可以传递数据，内置插件如果要升级，可以通过修改版本号升级，已安装用户可使用 install 从外部安装升级
 //                RePlugin.install("file:///android_asset/pluginme.jar");
                 Intent intent = new Intent();
-                intent.setComponent(new ComponentName("com.example.pluginme", "com.example.pluginme.MainActivity"));
+                //        plugintest
+                intent.setComponent(new ComponentName("pluginme", "com.example.pluginme.ResultActivity"));
 
-//                intent.putExtra("host_str1", "cccc");
-//                intent.putExtra("host_str2", "dddd");
-                RePlugin.startActivityForResult(this, intent, 100, null);
+                int REQUEST_CODE_DEMO1 = 10;
 //                RePlugin.startActivity(this, intent);
+                RePlugin.startActivityForResult(this, intent, REQUEST_CODE_DEMO1, null);
                 break;
         }
     }
@@ -66,7 +64,7 @@ public class Demo1MainActivity extends AppCompatActivity {
 //        super.onActivityResult(requestCode, resultCode, data);
 //        if (requestCode == 100 && resultCode == RESULT_OK) {
         if (null != data) {
-            String result = data.getStringExtra("result");
+            String result = data.getStringExtra("data");
             Toast.makeText(Demo1MainActivity.this, result, Toast.LENGTH_SHORT).show();
         }
 //        }

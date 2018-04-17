@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://F:\demo\kuangjia\android\repluginTest\app\app.iml" filepath="F:\demo\kuangjia\android\repluginTest\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/pluginme/pluginme.iml" filepath="$PROJECT_DIR$/pluginme/pluginme.iml" />
-      <module fileurl="file://$PROJECT_DIR$/repluginTest.iml" filepath="$PROJECT_DIR$/repluginTest.iml" />
+      <module fileurl="file://F:\demo\kuangjia\android\repluginTest\pluginme\pluginme.iml" filepath="F:\demo\kuangjia\android\repluginTest\pluginme\pluginme.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/repluginTest.iml" filepath="$PROJECT_DIR$/.idea/repluginTest.iml" />
+      <module fileurl="file://F:\demo\kuangjia\android\repluginTest\repluginTest.iml" filepath="F:\demo\kuangjia\android\repluginTest\repluginTest.iml" />
     </modules>
   </component>
 </project>
