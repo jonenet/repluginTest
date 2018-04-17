@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pluginme">
+
+    <!--library 中supportsRtl=true allowBackup="false" 这个必须写死 看gradle的时候再分析为什么是这样-->
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        >
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+    <!--
+    静态 进程分配
+    from：原来声明的进程名是什么。例如有个Activity，其进程名声明为“com.qihoo360.launcher:wff”
+    $ui：映射到UI进程
+    $p0：映射到进程坑位0进程
+    $p1：映射到进程坑位1进程
+    以此类推
+    如果“漏配置了”某个进程，则该进程默认将跑在主进程中
+    动态分配
+    就是啥都不配 系统会自动分配
+    有必要的时候才配置
+    -->
+    <!--<meta-data-->
+        <!--android:name="process_map"-->
+        <!--android:value="[{'from':'com.qihoo360.replugin.sample.demo1:bg','to':'$p0'}]" />-->
+
+
+</manifest>
