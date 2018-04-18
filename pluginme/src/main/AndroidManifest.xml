@@ -16,7 +16,20 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ResultActivity"/>
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".ActionStartActivity">
+            <intent-filter>
+                <action android:name="com.example.pluginme.action_start" />
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".ActionStartMeActivity">
+
+            <intent-filter>
+                <action android:name="com.example.pluginme.action_start_me" />
+            </intent-filter>
+        </activity>
     </application>
 
     <!--

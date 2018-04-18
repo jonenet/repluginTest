@@ -6,8 +6,9 @@
       <module fileurl="file://F:\demo\kuangjia\android\repluginTest\app\app.iml" filepath="F:\demo\kuangjia\android\repluginTest\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/pluginme/pluginme.iml" filepath="$PROJECT_DIR$/pluginme/pluginme.iml" />
       <module fileurl="file://F:\demo\kuangjia\android\repluginTest\pluginme\pluginme.iml" filepath="F:\demo\kuangjia\android\repluginTest\pluginme\pluginme.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/repluginTest.iml" filepath="$PROJECT_DIR$/.idea/repluginTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/repluginTest.iml" filepath="$PROJECT_DIR$/repluginTest.iml" />
       <module fileurl="file://F:\demo\kuangjia\android\repluginTest\repluginTest.iml" filepath="F:\demo\kuangjia\android\repluginTest\repluginTest.iml" />
+      <module fileurl="file://D:\DEVSource\MyApp\MyWorkSpace01\MyTestPj\plugin\repluginTest\.idea\repluginTest.iml" filepath="D:\DEVSource\MyApp\MyWorkSpace01\MyTestPj\plugin\repluginTest\.idea\repluginTest.iml" />
     </modules>
   </component>
 </project>

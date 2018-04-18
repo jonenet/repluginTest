@@ -29,12 +29,20 @@ public class Demo1MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.tv_start_plugin_start_inner_1, R.id.tv_start_plugin_inner_my})
+    @OnClick({R.id.tv_start_plugin_start_inner_1, R.id.tv_start_plugin_inner_my, R.id.tv_start_plugin_action})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_start_plugin_start_inner_1:
                 //可以打开插件，说明主件是没有问题的
                 RePlugin.startActivity(this, RePlugin.createIntent("com.qihoo360.replugin.sample.demo1", "com.qihoo360.replugin.sample.demo1.MainActivity"));
+                break;
+            case R.id.tv_start_plugin_action:
+                //RePlugin打开插件组件除了添加action还需要添加别名
+                Intent intentAction = new Intent();
+                intentAction.setAction("com.example.pluginme.action_start");
+//                intentAction.addCategory(Intent.CATEGORY_DEFAULT);
+                RePlugin.startActivity(this, intentAction, "pluginme", null);
+//                RePlugin.startActivity(this, intentAction);
                 break;
             case R.id.tv_start_plugin_inner_my:
                 //可以跳转，说明插件是OK的
